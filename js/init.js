@@ -133,6 +133,13 @@
       randomize: false,
    });
 
+   function ok (){
+    $('#image-loader').fadeOut();
+    $('#message-warning').hide();
+    $('#contactForm').fadeOut();
+    $('#message-success').fadeIn();
+   }
+
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
