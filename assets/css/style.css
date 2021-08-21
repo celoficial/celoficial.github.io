@@ -230,6 +230,15 @@ img {
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .section-title {
   padding: 0 15px;
   flex: 0 0 100%;
@@ -253,6 +262,10 @@ img {
   font-size: 16px;
   font-weight: 600;
   color: var(--skin-color);
+}
+
+.section.hide {
+  display: none;
 }
 
 /* Header */
@@ -336,6 +349,30 @@ img {
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
+}
+
+.fade-ou-effect {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  visibility: hidden;
+  background-color: var(--bg-black-50);
+}
+
+.fade-ou-effect.active {
+  visibility: visible;
+  z-index: 1000;
+  animation: fadeOut 0.3s ease-out;
+}
+
+.nav-menu.open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  transition: all 0.3s ease-in;
 }
 
 .nav-menu .close-nav-menu {
