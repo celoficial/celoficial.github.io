@@ -4,7 +4,6 @@
   const tabsContainer = document.querySelector(".about-tabs");
 
   tabsContainer.addEventListener("click", (event) => {
-    console.log(event.target);
     if (
       event.target.classList.contains("tab-item") &&
       !event.target.classList.contains("active")
